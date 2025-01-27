@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KamarController;
+use App\Http\Controllers\PenghuniController;
+use App\Http\Controllers\FasilitasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,11 +35,26 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
+    return view('admin.dashboard', [
+        'title' => 'Dashboard Admin'
+    ]);
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
 
 require __DIR__.'/adminauth.php';
 
-Route::get('/welcome', function () {
-    return view('welcome'); // Ganti 'welcome' dengan nama view yang sesuai
-})->name('welcome');
+Route::get('/adminkamar',[KamarController::class,'dashboard'])->name('admin.dashboardkamar');
+Route::post('/storekamar',[KamarController::class, 'storekamar'])->name('storekamar');
+Route::get('/deletekamar/{idKamar}',[KamarController::class, 'deletekamar'])->name('deletekamar');
+Route::post('/updatekamar/{idKamar}',[KamarController::class, 'updatekamar'])->name('updatekamar');
+
+Route::get('/adminpenghuni',[PenghuniController::class, 'index'])->name('admin.indexpenghuni');
+Route::post('/storepenghuni',[PenghuniController::class,'storepenghuni'])->name('storepenghuni');
+Route::get('/deletepenghuni/{idPenghuni}',[PenghuniController::class, 'deletepenghuni'])->name('deletepenghuni');
+Route::post('/updatepenghuni/{idPenghuni}',[PenghuniController::class, 'updatepenghuni'])->name('updatepenghuni');
+
+
+
+Route::get('/adminfasilitas', [FasilitasController::class, 'index'])->name('admin.indexfasilitas');
+Route::post('/storefasilitas', [FasilitasController::class, 'storefasilitas'])->name('admin.storefasilitas');
+Route::put('/updatefasilitas/{id}', [FasilitasController::class, 'updatefasilitas'])->name('admin.updatefasilitas');
+Route::delete('/destroyfasilitas/{idFailitas}', [FasilitasController::class, 'destroyfasilitas'])->name('admin.destroyfasilitas');

@@ -23,6 +23,10 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
+    protected function registered(Request $request, $user)
+    {
+        return redirect()->route('login')->with('message', 'Registration successful! Please log in.');
+    }   
     /**
      * Handle an incoming registration request.
      *

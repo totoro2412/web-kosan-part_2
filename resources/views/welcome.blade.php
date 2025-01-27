@@ -65,10 +65,10 @@
           <h3>Log in to KosBanda</h3>
           <div class="login-options">
             <a class="btn-login tenant" href="{{ route('login') }}">
-                <i class="fas fa-user icon"></i> Tenant Kos
+                <i class="fas fa-users icon"></i> Tenant Kos
             </a>
             <a class="btn-login admin" href="{{ route('admin.login') }}">
-                <i class="fas fa-cog icon"></i> Admin Kos
+                <i class="fas fa-user icon"></i> Admin Kos
             </a>
         </div>
         </div>
@@ -95,7 +95,7 @@
                 Untuk menyewa kamar, Anda harus mendaftar dan masuk terlebih dahulu.
 
               <div class="hero-buttons">
-                <a href="{{ route('register') }}" class="btn btn-primary me-0 me-sm-2 mx-1">Get In Now</a>
+                <a href="{{ route('register') }}" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
               </div>
             </div>
           </div>

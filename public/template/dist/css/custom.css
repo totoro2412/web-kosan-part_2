@@ -1,0 +1,139 @@
+/* Custom Sidebar Background */
+.app-menu {
+    background-color: #E6B31E; /* Warna latar belakang sidebar */
+    color: #ffffff; /* Warna teks di sidebar */
+    width: 250px; /* Lebar sidebar */
+    height: 100vh; /* Tinggi penuh */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Bayangan di pinggir */
+    border-top-right-radius: 20px; /* Lengkungan atas kanan */
+    border-bottom-right-radius: 20px; /* Lengkungan bawah kanan */
+    position: fixed; /* Memposisikan sidebar */
+    z-index: 1000; /* Mengatur z-index agar tetap di atas */
+}
+
+/* Gaya untuk menu link */
+.app-menu .nav-link {
+    font-size: 19px; /* Ukuran font */
+    font-weight: 500; /* Berat font */
+    color: #E6B31E; /* Warna teks untuk kontras */
+    text-transform: capitalize; /* Awal huruf kapital */
+}
+
+.app-menu .nav-link:hover {
+    background-color: #E6B31E; /* Warna latar saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+/* Menu aktif */
+.app-menu .nav-link.active {
+    font-weight: 600; /* Tebal untuk menu aktif */
+    color: #ffffff; /* Warna teks menu aktif */
+    background-color: #E6B31E; /* Warna latar menu aktif */
+}
+
+/* Gaya untuk judul menu */
+.app-menu .menu-title {
+    font-size: 19px; /* Ukuran font lebih besar */
+    font-weight: bold; /* Berat font tebal */
+    color: #ffffff; /* Warna teks judul */
+    margin-bottom: 10px; /* Jarak bawah */
+    text-transform: uppercase; /* Semua huruf kapital */
+}
+
+/* Gaya untuk dropdown menu */
+.app-menu .menu-dropdown {
+    background-color: #E6B31E; /* Warna dropdown */
+    color: #ffffff; /* Warna teks dropdown */
+}
+
+/* Gaya untuk ikon menu */
+.app-menu .nav-link i {
+    font-size: 18px; /* Ukuran ikon */
+    color: #000000; /* Warna ikon */
+    margin-right: 8px; /* Jarak dengan teks */
+}
+
+.app-menu .nav-link span {
+    font-size: 18px; /* Ukuran ikon */
+    color: #000000; /* Warna ikon */
+    margin-right: 8px; /* Jarak dengan teks */
+}
+
+.app-menu .nav-link t-dashboards {
+    font-size: 18px; /* Ukuran ikon */
+    color: #000000; /* Warna ikon */
+    margin-right: 8px; /* Jarak dengan teks */
+}
+
+.app-menu .nav-link:hover i {
+    color: #ffffff; /* Warna ikon saat hover */
+}
+
+/* Gaya untuk scrollbar dalam sidebar */
+#scrollbar {
+    overflow-y: auto;
+    scrollbar-color: #ffffff #E6B31E; /* Warna scroll */
+    scrollbar-width: thin;
+}
+
+#scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Gaya untuk div menu-dropdown */
+.menu-dropdown {
+    background-color: #ffffff; /* Warna latar dropdown */
+    border-radius: 5px; /* Sudut membulat */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan lembut */
+    padding: 10px; /* Jarak dalam */
+    transition: box-shadow 0.3s ease; /* Transisi halus */
+}
+
+/* Efek hover untuk dropdown */
+.menu-dropdown:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat saat hover */
+}
+
+/* Gaya untuk ul di dalam menu-dropdown */
+.menu-dropdown ul.nav {
+    list-style: none; /* Hilangkan bullet points */
+    padding: 0; /* Hilangkan padding */
+    margin: 0; /* Hilangkan margin */
+}
+
+/* Gaya untuk setiap item (li) */
+.menu-dropdown ul.nav li.nav-item {
+    margin-bottom: 8px; /* Tambahkan jarak antar item */
+}
+
+/* Gaya untuk link (a) di dalam nav-item */
+.menu-dropdown ul.nav li.nav-item a.nav-link {
+    font-size: 16px; /* Atur ukuran font */
+    color: #000000; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 8px 12px; /* Tambahkan padding */
+    border-radius: 5px; /* Tambahkan radius sudut */
+    transition: all 0.3s ease; /* Tambahkan transisi untuk efek hover */
+}
+
+/* Gaya saat link di-hover */
+.menu-dropdown ul.nav li.nav-item a.nav-link:hover {
+    background-color: #e6b31e; /* Ubah warna latar saat hover */
+    color: #fff; /* Ubah warna teks saat hover */
+}
+
+/* Gaya untuk link aktif */
+.menu-dropdown ul.nav li.nav-item a.nav-link.active {
+    background-color: #e6b31e; /* Warna latar aktif */
+    color: #fff; /* Warna teks aktif */
+    font-weight: bold; /* Teks aktif dibuat tebal */
+}
+.nav-item a.nav-link {
+    background-color: transparent !important; /* Menghilangkan warna hitam */
+    color: inherit; /* Memastikan teks tetap sesuai tema */
+    border: none; /* Opsional: jika ada border */
+}
+
+.nav-item a.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Menambahkan efek hover jika diinginkan */
+}
